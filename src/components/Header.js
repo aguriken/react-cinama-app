@@ -54,22 +54,12 @@ const Header = () => {
           <img src={logo} alt="" />
           Cinema App
         </div>
-        <div
-          className={`${
-            menuClass ? 'header-menu-toggle is-active' : 'header-menu-toggle'
-          }`}
-          id="header-mobile-menu"
-          onClick={() => toggleMegue()}
-        >
+        <div className={`${menuClass ? 'header-menu-toggle is-active' : 'header-menu-toggle'}`} id="header-mobile-menu" onClick={() => toggleMegue()}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
-        <ul
-          className={`${
-            navClass ? 'header-nav header-mobile-nav' : 'header-nav'
-          }`}
-        >
+        <ul className={`${navClass ? 'header-nav header-mobile-nav' : 'header-nav'}`}>
           {HEADER_LIST.map((data) => (
             <li className="header-nav-item" key={data.id}>
               <span className="header-list-name">
@@ -80,11 +70,7 @@ const Header = () => {
             </li>
           ))}
 
-          <input
-            className="search-input"
-            type="text"
-            placeholder="search for a movie"
-          />
+          <input className="search-input" type="text" placeholder="search for a movie" />
         </ul>
       </div>
     </div>
